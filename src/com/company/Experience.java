@@ -1,20 +1,21 @@
 package com.company;
 
+import java.util.ArrayList;
+
 public class Experience {
     private String companyName;
     private String title;
     private int date;
-    private String description;
+    ArrayList<String>duty;
 
-    public Experience(){
-
+    public Experience() {
     }
 
-    public Experience(String companyName, String title, int date, String description) {
+    public Experience(String companyName, String title, int date, ArrayList<String> duty) {
         this.companyName = companyName;
         this.title = title;
         this.date = date;
-        this.description = description;
+        this.duty = duty;
     }
 
     public String getCompanyName() {
@@ -41,12 +42,21 @@ public class Experience {
         this.date = date;
     }
 
-    public String getDescription() {
-        return description;
+    public ArrayList<String> getDuty() {
+        return duty;
     }
 
-    public void setDescription(String description) {
-        this.description = description;
+    public void setDuty(ArrayList<String> duty) {
+        this.duty = duty;
+    }
+    public String getDuties(){
+        String out= " ";
+        for(String dut : duty){
+            out +="-" + dut+"\n";
+        }
+        return out;
     }
 }
+
+
 

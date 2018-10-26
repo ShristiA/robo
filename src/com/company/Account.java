@@ -3,17 +3,16 @@ package com.company;
 public class Account {
     private String name;
     private String email;
-    private int number;
+
 
 
     public Account(){
 
     }
 
-    public Account(String name, String email, int number) {
+    public Account(String name, String email) {
         this.name = name;
         this.email = email;
-        this.number = number;
     }
 
     public String getName() {
@@ -30,14 +29,6 @@ public class Account {
 
     public void setEmail(String email) {
         this.email = email;
-    }
-
-    public int getNumber() {
-        return number;
-    }
-
-    public void setNumber(int number) {
-        this.number = number;
     }
 }
 
